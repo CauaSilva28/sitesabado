@@ -186,12 +186,58 @@ p{
     font-size:1.5rem;
 }
 
-.menu-social{
-    gap:1rem;
-}
-
 .header-nav{
     display:none;
 }
 
 /* ---------FIM CSS MENU---------- */
+
+.menu-social{
+    gap:1rem;
+}
+
+.btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0.625rem;
+    width:100%;
+    padding:0.875rem;
+    background:transparent;
+    border-radius:3.125rem;
+    border:2px solid var(--primary-border-color);
+    transition:ease-in-out .3s;
+    cursor:pointer;
+    color:var(--primary-color);
+}
+.btn:hover{
+    transform:scale(1.05);
+    transition:ease-in-out .3s;
+}
+.btn span, .btn i{
+    font-size:1.25rem;
+    text-transform:uppercase;
+}
+.btn-primary span{
+    color:var(--primary-color);
+}
+.btn-primary{
+    border:1px solid var(--primary-color);
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.main-content{
+    display:flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+
+.video iframe{
+    width:100%;
+    aspect-ratio:16/9;
+}
