@@ -201,7 +201,7 @@ p{
     justify-content:center;
     align-items:center;
     gap:0.625rem;
-    width:100%;
+    /* width:100%; */
     padding:0.875rem;
     background:transparent;
     border-radius:3.125rem;
@@ -230,7 +230,6 @@ main{
     flex-direction: column;
     gap:2rem;
 }
-
 .main-content{
     display:flex;
     flex-direction: column;
@@ -280,3 +279,31 @@ main{
 }
 
 /* FIM SECTION TECNOLOGIA */
+
+/* PROJETOS */
+.projetos{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.projetos-container{
+    display:flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.projeto-card{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.cartao{
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    object-position: center;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
