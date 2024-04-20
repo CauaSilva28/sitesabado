@@ -88,7 +88,7 @@ h2{
 }
 h3{
     font-size: 1.55rem;
-    text-align:center;
+    text-align:left;
 }
 h4{
     color:var(--primary-color);
