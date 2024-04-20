@@ -306,4 +306,42 @@ main{
 .card-body{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
 }
+.card-descricao{
+    color:var(--title-color);
+}
+.card-list{
+    margin-left:1.25rem;
+}
+.card-item{
+    list-style: disc;
+}
+.card-button, .descricao-button{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.card-button .btn{
+    padding:0.65rem 1.25rem;
+}
+.card-button .btn span{
+    font-size:1rem;
+}
+
+.card-body .tecnologias-item{
+    width: 4rem;
+    height:4rem;
+}
+.card-body .tecnologias-logo{
+    height:2rem;
+}
+
+.projetos .btn{
+    width:auto;
+    height:auto;
+}
+
+/* FIM PROJETO */
