@@ -409,11 +409,11 @@ main{
 .accordion-header span{
     color:var(--title-color);
 }
-.accordion-header .start{
+.accordion-header.start{
     border-radius: 1rem 1rem 0rem 0rem;
 }
 
-.accordion-header .end,
+.accordion-header.end,
 .accordion-item.active .accordion-body.end{
     border-radius: 0rem 0rem 1rem 1rem;
 }
@@ -427,4 +427,13 @@ main{
     align-items:flex-start;
     gap:0.625rem;
     border: 1px var(--secondary-border-color);
+}
+.accordion-item.active .accodion-header{
+    background:var(--secondary-bg-color);
+}
+.accordion-item.active .accordion-body{
+    display:flex;
+}
+.accordion-item.active .bi-caret-down-fill{
+    transform: rotate(180deg);
 }
