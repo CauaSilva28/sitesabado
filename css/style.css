@@ -115,6 +115,7 @@ p{
     flex-flow:row wrap;
     justify-content: space-between;
     align-items:center;
+    width:85%;
     padding: 0.5rem 1rem;
     z-index:2;
 }
@@ -285,6 +286,7 @@ main{
     display: flex;
     flex-direction: column;
     gap:2rem;
+    margin-top:2rem;
 }
 .projetos-container{
     display:flex;
@@ -393,6 +395,16 @@ main{
     gap:0.5rem;
 }
 
+.row1, .row2{
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.row2{
+    margin-top:1rem;
+}
+
 .accordion-header{
     width:100%;
     display:flex;
@@ -436,4 +448,113 @@ main{
 }
 .accordion-item.active .bi-caret-down-fill{
     transform: rotate(180deg);
+}
+
+/* Contato */
+.contato{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:1.5rem;
+    border-top:1px solid var(--primary-border-color);
+    border-bottom:1px solid var(--primary-border-color);
+}
+.contato p{
+    text-align:center;
+}
+.contato .btn{
+    width:auto;
+}
+.contato .email{
+    text-transform: lowercase;
+}
+
+/* footer */
+footer{
+    margin-bottom:5rem;
+}
+footer p{
+    font-size:0.875rem;
+    text-align:center;
+    padding:1rem;
+}
+
+@media(min-width:768px){
+    .header{
+        position:fixed;
+        border-bottom:1px solid var(--primary-border-color);
+        padding:1rem 6rem;
+        background:var(--primary-bg-color);
+    }
+
+    .nav-mobile{
+        display:none;
+    }
+
+    .header-nav{
+        display:flex;
+    }
+    .header-nav, .header-toggle{
+        min-width: 30%;
+    }
+
+    h1{
+        font-size:5rem;
+    }
+    h2{
+        font-size:3rem;
+    }
+
+    main, .projeto, .sobre{
+        padding: 8rem 6rem 4rem 6rem;
+    }
+    
+    .contato{
+        padding:6rem;
+    }
+    .contato p{
+        width: 80%;
+    }
+    
+    .main-content{
+        display:flex;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    .tecnologias{
+        padding:6.25rem 6rem 2rem 6rem;
+        margin-top:-6rem;
+    }
+
+    footer{
+        margin:0;
+    }
+}
+
+@media(min-width:992px){
+    .projeto-card{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .projeto-card.card-reverso{
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cartao{
+        width:50%;
+    }
+    .sobre{
+        gap:5rem;
+    }
+    .sobre-content1, .sobre-content2{
+        display: grid;
+        grid-template-columns: 34% 60%;
+        justify-content: flex-start;
+        align-items:center;
+        gap:4rem;
+    }
 }
