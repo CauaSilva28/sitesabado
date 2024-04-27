@@ -3,32 +3,32 @@
 
 /*Código para definir o tema dark do site*/
 :root, :root[data-theme='dark']{
-    --primary-bg-color: #111217;
-    --secondary-bg-color: #292934;
-    --primary-color: #f0f0f0;
-    --primary-border-color: #28292e;
-    --secondary-border-color: #56575a;
+    --primary-bg-color: #36393b;
+    --secondary-bg-color: #45484b;
+    --primary-color: #c5bc8e;
+    --primary-border-color: #696758;
+    --secondary-border-color: #9c9774;
 
     /*Definir cores padrão para os textos*/
-    --title-color: #f0f0f0;
-    --text-color: #9a9a9c;
-    --link-color: #9a9a9c;
+    --title-color: #eee6ab;
+    --text-color: #a8a8a8;
+    --link-color: #696758;
     --icon-color: #c7c8c9;
 }
 
 /*Código para definir o tema dark do site*/
 :root [data-theme='light']{
-    --primary-bg-color: #e9e9e9;
-    --secondary-bg-color: #c7c8c9;
-    --primary-color: #0b0b0f;
-    --primary-border-color: #c7c8c9;
-    --secondary-border-color: #9a9a9c;
+    --primary-bg-color: #eee6ab;
+    --secondary-bg-color: #c5bc8e;
+    --primary-color: #36393b;
+    --primary-border-color: #45484b;
+    --secondary-border-color: #5b5e61;
 
     /*Definir cores padrão para os textos*/
-    --title-color: #0b0b0f;
+    --title-color: #36393b;
     --text-color: #28292e;
-    --link-color: #28292e;
-    --icon-color: #56575a;
+    --link-color: #696758;
+    --icon-color: #696758;
 }
 
 html[data-theme='light'] .brand-logo{
@@ -115,7 +115,6 @@ p{
     flex-flow:row wrap;
     justify-content: space-between;
     align-items:center;
-    width:85%;
     padding: 0.5rem 1rem;
     z-index:2;
 }
@@ -456,9 +455,11 @@ main{
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    margin-top:1rem;
     gap:1.5rem;
     border-top:1px solid var(--primary-border-color);
     border-bottom:1px solid var(--primary-border-color);
+    padding:2rem;
 }
 .contato p{
     text-align:center;
@@ -486,6 +487,7 @@ footer p{
         border-bottom:1px solid var(--primary-border-color);
         padding:1rem 6rem;
         background:var(--primary-bg-color);
+        width:85%;
     }
 
     .nav-mobile{
@@ -511,7 +513,7 @@ footer p{
     }
     
     .contato{
-        padding:6rem;
+        padding:4rem;
     }
     .contato p{
         width: 80%;
@@ -556,5 +558,11 @@ footer p{
         justify-content: flex-start;
         align-items:center;
         gap:4rem;
+    }
+    .sobre-descricao h2{
+        text-align:left;
+    }
+    .descricao-button{
+        justify-content: flex-start;
     }
 }
