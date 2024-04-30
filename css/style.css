@@ -207,7 +207,7 @@ p{
     padding:0.875rem;
     background:transparent;
     border-radius:3.125rem;
-    border:2px solid var(--primary-border-color);
+    border:none;
     transition:ease-in-out .3s;
     cursor:pointer;
     color:var(--primary-color);
