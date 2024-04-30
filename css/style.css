@@ -39,10 +39,11 @@ html[data-theme='light'] .brand-logo{
 *{
     margin: 0;
     padding: 0;
-    vertical-align:baseline;
-    list-style:none;
-    scrollbar-width:thin;
-    scrollbar-color:var(--secondary-bg-color) transparent;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-bg-color) transparent;
 }
 
 body{
@@ -123,7 +124,6 @@ p{
 .header-toggle{
     display:flex;
     justify-content:flex-end;
-    margin-right:10vw;
 }
 
 .header-brand .brand-logo{
@@ -487,7 +487,7 @@ footer p{
     .header{
         position:fixed;
         border-bottom:1px solid var(--primary-border-color);
-        padding:1rem 2.5rem;
+        padding:1rem 5rem;
         background:var(--primary-bg-color);
     }
 
@@ -536,10 +536,6 @@ footer p{
 }
 
 @media(min-width:992px){
-    .header{
-        padding:1rem 4.5rem;
-    }
-
     .projeto-card{
         flex-direction: row;
         justify-content: space-around;
