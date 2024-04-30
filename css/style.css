@@ -115,13 +115,15 @@ p{
     flex-flow:row wrap;
     justify-content: space-between;
     align-items:center;
-    padding: 0.5rem 1rem;
+    width:100%;
+    padding: 0.5rem 1.5rem;
     z-index:2;
 }
 
 .header-toggle{
     display:flex;
     justify-content:flex-end;
+    margin-right:10vw;
 }
 
 .header-brand .brand-logo{
@@ -485,12 +487,11 @@ footer p{
     .header{
         position:fixed;
         border-bottom:1px solid var(--primary-border-color);
-        padding:1rem 6rem;
+        padding:1rem 2.5rem;
         background:var(--primary-bg-color);
-        width:85%;
     }
 
-    .nav-mobile{
+    #nav-mobile{
         display:none;
     }
 
@@ -535,6 +536,10 @@ footer p{
 }
 
 @media(min-width:992px){
+    .header{
+        padding:1rem 4.5rem;
+    }
+
     .projeto-card{
         flex-direction: row;
         justify-content: space-around;
