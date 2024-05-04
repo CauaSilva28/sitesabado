@@ -79,7 +79,7 @@ b{
 }
 
 h1{
-    font-size:10vw;
+    font-size:2.5rem;
     font-weight:200;
 }
 h2{
@@ -117,7 +117,7 @@ p{
     justify-content: space-between;
     align-items:center;
     width:100%;
-    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+    padding: 0.5rem;
     z-index:2;
 }
 
@@ -228,6 +228,10 @@ p{
     border:1px solid var(--primary-color);
 }
 
+#home, .projetos, .sobre, .contato{
+    padding:2.5rem 1rem;
+}
+
 main{
     display:flex;
     flex-direction: column;
@@ -288,7 +292,6 @@ main{
     display: flex;
     flex-direction: column;
     gap:2rem;
-    margin-top:2rem;
 }
 .projetos-container{
     display:flex;
@@ -354,7 +357,6 @@ main{
     display:flex;
     flex-direction: column;
     gap:1.5rem;
-    margin-top:2rem;
 }
 .sobre-content1, .sobre-content2{
     display:flex;
@@ -449,7 +451,6 @@ main{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    margin-top:1rem;
     gap:1.5rem;
     border-top:1px solid var(--primary-border-color);
     border-bottom:1px solid var(--primary-border-color);
@@ -463,10 +464,6 @@ main{
 }
 .contato .email{
     text-transform: lowercase;
-}
-
-#home, .projetos, .sobre{
-    padding:0rem 1rem 0rem;
 }
 
 /* footer */
@@ -487,7 +484,7 @@ footer p{
         background:var(--primary-bg-color);
     }
 
-    #nav-mobile{
+    .nav-mobile{
         display:none;
     }
 
@@ -499,7 +496,7 @@ footer p{
     }
 
     h1{
-        font-size:6vw;
+        font-size:5rem;
     }
     h2{
         font-size:3rem;
@@ -615,6 +612,9 @@ footer p{
 }
 
 @media(min-width:1400px){
+    h1{
+        font-size:6.25rem;
+    }
     h2{
         font-size:4.5rem;
     }
