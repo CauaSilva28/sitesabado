@@ -155,7 +155,7 @@ p{
 }
 
 .menu-link.active .menu-icon, .menu-link.active .menu-text,
-.menu-link:hover .menu-icon, .menu-link:hover .menu-text {
+.menu-link:hover .menu-icon, .menu-link:hover .menu-text { /* A vírgula separa diferentes classes mas que terão a mesma formatação, ja quando não tem virugla, é pego a classe que está dentro da classe que vem antes */
     color: var(--primary-color);
 }
 
@@ -383,28 +383,18 @@ main{
 .sobre-icons i{
     font-size:1.25rem;
 }
-.sobre-content1 .col1,
+.sobre-content2 .col1,
 .sobre-content2 .col2{
     display: flex;
     flex-direction: column;
     text-align: justify;
     gap:2rem;
 }
-.sobre-content1 .col1 .row1,
+.sobre-content2 .col1 .row1,
 .sobre-content2 .col1 .row2{
     display: flex;
     flex-direction: column;
     gap:0.5rem;
-}
-
-.row1, .row2{
-    display:flex;
-    flex-direction: column;
-    gap:0.5rem;
-}
-
-.row2{
-    margin-top:2rem;
 }
 
 .accordion-header{
@@ -546,7 +536,6 @@ footer p{
         justify-content: space-around;
         align-items: center;
     }
-
     .projeto-card.card-reverso{
         flex-direction: row-reverse;
         justify-content: space-around;
@@ -555,6 +544,7 @@ footer p{
     .cartao{
         width:50%;
     }
+
     .sobre{
         gap:5rem;
     }
@@ -568,6 +558,7 @@ footer p{
     .sobre-descricao h2{
         text-align:left;
     }
+
     .descricao-button{
         justify-content: flex-start;
     }
@@ -601,5 +592,43 @@ footer p{
     .tecnologias-lista{
         gap:1rem;
     }
+    .tecnologios-item{
+        width:6rem;
+        height:6rem;
+    }
+    .tecnologias-logo{
+        height:3rem;
+    }
 
+    p, span, li{
+        font-size:1.15rem;
+    }
+
+    .card-button .btn, .descricao-button .btn{
+        width:auto;
+    }
+}
+
+@media(min-width:1400px){
+    h1{
+        font-size:6.25rem;
+    }
+    h2{
+        font-size:4.5rem;
+    }
+    h3{
+        font-size: 3.25rem;
+    }
+
+    .header{
+        padding:1rem 15rem;
+    }
+
+    #home{
+        padding:12rem 15rem 2rem;
+    }
+
+    .tecnologias, .projetos, .sobre{
+        padding:10rem 15rem 4rem;
+    }
 }
