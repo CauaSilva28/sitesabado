@@ -117,13 +117,14 @@ p{
     justify-content: space-between;
     align-items:center;
     width:100%;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
     z-index:2;
 }
 
 .header-toggle{
     display:flex;
     justify-content:flex-end;
+    padding-right: 0.5rem;
 }
 
 .header-brand .brand-logo{
@@ -259,7 +260,7 @@ main{
     font-size:2rem;
     text-transform: none;
     letter-spacing: normal; /* ESPAÇO ENTRE AS LETRAS */
-    text-align:start;
+    text-align:center;
 }
 .tecnologias-lista{
     display:flex;
@@ -462,6 +463,10 @@ main{
 }
 .contato .email{
     text-transform: lowercase;
+}
+
+#home, .projetos, .sobre{
+    padding:0rem 2rem 0rem;
 }
 
 /* footer */
