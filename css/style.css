@@ -117,7 +117,7 @@ p{
     justify-content: space-between;
     align-items:center;
     width:100%;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem;
     z-index:2;
 }
 
@@ -353,6 +353,7 @@ main{
     display:flex;
     flex-direction: column;
     gap:1.5rem;
+    margin-top:2rem;
 }
 .sobre-content1, .sobre-content2{
     display:flex;
@@ -403,7 +404,7 @@ main{
 }
 
 .row2{
-    margin-top:1rem;
+    margin-top:2rem;
 }
 
 .accordion-header{
@@ -509,8 +510,12 @@ footer p{
         font-size:3rem;
     }
 
-    main, .projeto, .sobre{
+    #home{
         padding: 8rem 6rem 4rem 6rem;
+    }
+
+    .projetos, .sobre{
+        padding: 3rem 6rem 3rem 6rem;
     }
     
     .contato{
