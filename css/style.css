@@ -79,7 +79,7 @@ b{
 }
 
 h1{
-    font-size:2.5rem;
+    font-size:10vw;
     font-weight:200;
 }
 h2{
@@ -260,7 +260,7 @@ main{
     font-size:2rem;
     text-transform: none;
     letter-spacing: normal; /* ESPAÇO ENTRE AS LETRAS */
-    text-align:center;
+    text-align:start;
 }
 .tecnologias-lista{
     display:flex;
@@ -272,13 +272,13 @@ main{
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    width:4.8rem;
-    height:4.8rem;
+    width:4rem;
+    height:4rem;
     border:1px solid var(--secondary-border-color);
     border-radius:5rem;
 }
 .tecnologias-logo{
-    height: 2.4rem;
+    height: 2rem;
 }
 
 /* FIM SECTION TECNOLOGIA */
@@ -466,7 +466,7 @@ main{
 }
 
 #home, .projetos, .sobre{
-    padding:0rem 2rem 0rem;
+    padding:0rem 1rem 0rem;
 }
 
 /* footer */
@@ -499,7 +499,7 @@ footer p{
     }
 
     h1{
-        font-size:5rem;
+        font-size:6vw;
     }
     h2{
         font-size:3rem;
@@ -615,9 +615,6 @@ footer p{
 }
 
 @media(min-width:1400px){
-    h1{
-        font-size:6.25rem;
-    }
     h2{
         font-size:4.5rem;
     }
@@ -634,6 +631,6 @@ footer p{
     }
 
     .tecnologias, .projetos, .sobre{
-        padding:10rem 15rem 4rem;
+        padding:8rem 12rem 4rem;
     }
 }
