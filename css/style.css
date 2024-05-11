@@ -15,24 +15,26 @@
     --link-color: #696758;
     --icon-color: #c7c8c9;
 }
-
-/*Código para definir o tema dark do site*/
-:root [data-theme='light']{
+/*Código para definir o tema light do site*/
+:root[data-theme='light']{
     --primary-bg-color: #eee6ab;
     --secondary-bg-color: #c5bc8e;
-    --primary-color: #36393b;
+    --primary-color: #595851;
     --primary-border-color: #45484b;
     --secondary-border-color: #5b5e61;
 
     /*Definir cores padrão para os textos*/
     --title-color: #36393b;
-    --text-color: #28292e;
+    --text-color: #323225;
     --link-color: #696758;
     --icon-color: #696758;
 }
 
 html[data-theme='light'] .brand-logo{
-    filter: invert(1);
+    filter:brightness(40%);
+}
+html[data-theme='light'] .tecnologias-logo{
+    filter: invert(80%);
 }
 
 /* Reset CSS*/
@@ -390,7 +392,7 @@ main{
 .sobre-content2 .col2{
     display: flex;
     flex-direction: column;
-    text-align: justify;
+    text-align: start;
     gap:2rem;
 }
 .sobre-content2 .col1 .row1,
@@ -599,7 +601,7 @@ footer p{
         height:6rem;
     }
     .tecnologias-logo{
-        height:3rem;
+        height:2.5rem;
     }
 
     p, span, li{
