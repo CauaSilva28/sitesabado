@@ -13,7 +13,7 @@ function changeTheme(){
     toggleTheme.classList.toggle('bi-moon-stars');
 }
 
-toggleTheme.addEventListener('click', changeTheme);
+toggleTheme.addEventListener('click', changeTheme); //Evento de click (ao clicar no icone do tema)
 
 //Função abrir e fechar objetos selecionados
 accordionHeaders.forEach(header =>{ // => é mesma coisa que function() / forEach pega todos os elementos da const accordionHeader
@@ -22,5 +22,12 @@ accordionHeaders.forEach(header =>{ // => é mesma coisa que function() / forEac
         const accordionActive = accordionItem.classList.contains('active');
 
         accordionActive ? accordionItem.classList.remove('active') : accordionItem.classList.add('active');
+    });
+});
+
+menuLinks.forEach(item => {
+    item.addEventListener('click', () => {
+        menuLinks.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
     });
 });

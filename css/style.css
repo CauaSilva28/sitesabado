@@ -19,13 +19,13 @@
 :root[data-theme='light']{
     --primary-bg-color: #eee6ab;
     --secondary-bg-color: #c5bc8e;
-    --primary-color: #595851;
+    --primary-color: #454440;
     --primary-border-color: #45484b;
     --secondary-border-color: #5b5e61;
 
     /*Definir cores padrão para os textos*/
     --title-color: #36393b;
-    --text-color: #323225;
+    --text-color: #7e7a62;
     --link-color: #696758;
     --icon-color: #696758;
 }
@@ -406,6 +406,7 @@ main{
     width:100%;
     display:flex;
     padding:0.75rem 1rem;
+    gap:3rem;
     justify-content: space-between;
     align-items:center;
     border:1px solid var(--primary-border-color);
