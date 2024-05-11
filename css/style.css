@@ -177,6 +177,7 @@ p{
     bottom:0;
     justify-content:space-between;
     border-top:2px solid var(--primary-border-color);
+    z-index:3;
 }
 .menu-mobile .menu-link{
     flex-direction: column;
