@@ -1,8 +1,9 @@
 const toggleTheme = document.getElementById('toggleTheme'); //pega a id toggleTheme no arquivo HTML
 const rootHtml = document.documentElement; //pega todo o documento HTML
-const accordionHeader = document.querySelectorAll('.accordion-header'); //Seleciona todas as classes(.) accordion-header
+const accordionHeaders = document.querySelectorAll('.accordion-header'); //Seleciona todas as classes(.) accordion-header
 const menuLinks = document.querySelectorAll('.menu-link');
 
+//Função mudar tema do site
 function changeTheme(){
     const currentTheme = rootHtml.getAttribute('data-theme');
 
@@ -13,3 +14,13 @@ function changeTheme(){
 }
 
 toggleTheme.addEventListener('click', changeTheme);
+
+//Função abrir e fechar objetos selecionados
+accordionHeaders.forEach(header =>{ // => é mesma coisa que function() / forEach pega todos os elementos da const accordionHeader
+    header.addEventListener('click', () => {
+        const accordionItem = header.parentElement;
+        const accordionActive = accordionItem.classList.contains('active');
+
+        accordionActive ? accordionItem.classList.remove('active') : accordionItem.classList.add('active');
+    });
+});
