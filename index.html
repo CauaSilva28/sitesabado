@@ -1,866 +1,421 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 <head>
+    <title>Site do Cauã Silva - SENAI</title>  <!-- TITULO DO NAVEGADOR DO SITE -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nic Games</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
 
-    <!-- CSS Bootstrap -->
-    <link rel="stylesheet" href="bootstrap/aos/aos.css">
-    <link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="bootstrap/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" href="bootstrap/glightbox/css/glightbox.min.css">
-    <link rel="stylesheet" href="bootstrap/swiper/swiper-bundle.min.css">
-
-    <!-- CSS principal -->
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i> <!-- icone com classe de icon e desabilitado em display de telas grande (d-xl-none) -->
-
-    <!-- cabeçalho -->
-    <header id="header">
-        <div class="d-flex flex-column"> <!-- div com display flex em coluna -->
-            <div class="perfil">
-                <img class="img-fluid rounded-circle" src="img/logo.png">
-
-                <h1 class="text-light">Nic Games</h1>
-
-                <div class="social-links mt-3 text-center">
-                    <a href="#" target="_blank" class="instagram">
-                        <i class="bx bxl-instagram"></i> <!-- icone da biblioteca box icon -->
+    <header class="header"> <!-- cabeçalho -->
+        <nav class="header-nav"> <!-- navegador -->
+            <ul class="menu menu-principal"> <!-- lista não ordenada -->
+                <li class="menu-item">
+                    <a href="#home" class="menu-link active">
+                        <span class="menu-text">Home</span>
                     </a>
-                    <a href="#" target="_blank" class="linkedin">
-                        <i class="bx bxl-linkedin"></i>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#projetos" class="menu-link">
+                        <span class="menu-text">Projetos</span>
                     </a>
-                    <a href="#" target="_blank" class="github">
-                        <i class="bx bxl-github"></i>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#sobre" class="menu-link">
+                        <span class="menu-text">Sobre</span>
                     </a>
-                </div>
+                </li>
 
-                <nav id="navbar" class="nav-menu navbar">
-                    <ul>
-                        <li><a href="#hero" class="nav-link scrollto active">
-                            <i class="bx bx-home"></i>
-                            <span>Home</span>
-                        </a></li>
+                <li class="menu-item">
+                    <a href="#contato" class="menu-link">
+                        <span class="menu-text">Contato</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-                        <li><a href="#sobre" class="nav-link scrollto">
-                            <i class="bx bx-user"></i>
-                            <span>Sobre</span>
-                        </a></li>
+        <!-- logo -->
+        <div class="header-brand"> <!-- divisor -->
+            <a href="#home" target="_blank">
+                <img class="brand-logo" src="img/logo.png" />
+            </a> <!-- links -->
+        </div>
 
-                        <li><a href="#resumo" class="nav-link scrollto">
-                            <i class="bx bx-file-blank"></i>
-                            <span>Resumo</span>
-                        </a></li>
-
-                        <li><a href="#portfolio" class="nav-link scrollto">
-                            <i class="bx bx-copy-alt"></i>
-                            <span>Portfólio</span>
-                        </a></li>
-
-                        <li><a href="#servicos" class="nav-link scrollto">
-                            <i class="bx bx-server"></i>
-                            <span>Serviços</span>
-                        </a></li>
-
-                        <li><a href="#contato" class="nav-link scrollto">
-                            <i class="bx bx-chat"></i>
-                            <span>Contato</span>
-                        </a></li>
-                    </ul>
-                </nav>
-            </div><!-- fim perfil -->
+        <div class="header-toggle">
+            <i id="toggleTheme" class="bi bi-sun"></i> <!-- Icone modo dark e light -->
         </div>
     </header>
 
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="hero-container" data-aos="fade-in">
-            <h1>Nic Games</h1>
-            <p> Eu sou
-                <span class="typed" data-typed-items="gamer, apaixonado por tecnologia, sigma do RJ"> 
+    <!-- Menu mobile -->
+    <nav class="nav-mobile">
+        <ul class="menu menu-mobile">
+            <li class="menu-item">
+                <a href="#home" class="menu-link active">
+                    <i class="menu-icon bi bi-house-door"></i>
+                    <span class="menu-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="#projetos" class="menu-link">
+                    <i class="menu-icon bi bi-window-stack"></i>
+                    <span class="menu-text">Projetos</span>
+                </a>
+            </li>
 
-                </span>
-            </p>
+            <li class="menu-item">
+                <a href="#sobre" class="menu-link">
+                    <i class="menu-icon bi bi-person"></i>
+                    <span class="menu-text">Sobre</span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#contato" class="menu-link">
+                    <i class="menu-icon bi bi-envelope"></i>
+                    <span class="menu-text">Contato</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Fim Menu mobile -->
+
+    <main id="home">
+        <div class="main-content">
+            <h1><b>Soluções Criativas &</b> Desenvolvimento Front-End</h1>
+            <p>Cauã Silva, São Paulo - SP, Aluno Dev Front-End</p>
+            <ul class="menu menu-social">
+                <li>
+                    <a href="https://github.com/CauaSilva28" target="_blank" class="menu-link">
+                        <i class="menu-icon bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/cau%C3%A3-santos-7834332ab/" target="_blank" class="menu-link">
+                        <i class="menu-icon bi bi-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@top3fut47" target="_blank" class="menu-link">
+                        <i class="menu-icon bi bi-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/c4ua_svm/" target="_blank" class="menu-link">
+                        <i class="menu-icon bi bi-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <a href="#projetos">
+                <button class="btn btn-primary">
+                    <span>Ver projetos</span>
+                    <i class="bi bi-arrow-down-right"></i>
+                </button>
+            </a>
         </div>
+        <div class="video">
+            <iframe width="688" height="387" src="https://www.youtube.com/embed/MZQz4mf2Q8g" title="LB-Silhouette R35 GTR  | 4K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main> <!-- FIM MAIN -->
+
+    <section class="tecnologias">
+        <h2>Conhecimento nas principais tecnologias do desenvolvimento.</h2>
+        <ul class="tecnologias-lista">
+            <li class="tecnologias-item">
+                <img src="img/tecnologias/HTML5.svg" class="tecnologias-logo"/>
+            </li>
+
+            <li class="tecnologias-item">
+                <img src="img/tecnologias/Css.svg" class="tecnologias-logo"/>
+            </li>
+
+            <li class="tecnologias-item">
+                <img src="img/tecnologias/Javascript.svg" class="tecnologias-logo"/>
+            </li>
+
+            <li class="tecnologias-item">
+                <img src="img/tecnologias/Bootstrap.svg" class="tecnologias-logo"/>
+            </li>
+        </ul>
+    </section> <!-- FIM SECTION -->
+
+    <section id="projetos" class="projetos">
+        <h2>Projetos</h2>
+
+        <div class="projetos-container">
+            <div class="projeto-card">
+                <img class="cartao" src="img/projects/josisbox.jpg" alt="">
+
+                <div class="card-body">
+                    <h3 class="card-title">Josi's Box Ecommerce</h3>
+                    <p class="card-descricao">Loja Virtual de Livros</p>
+
+                    <ul class="card-list">
+                        <li class="card-item">Favoritos</li>
+                        <li class="card-item">Carrinho de Compras</li>
+                        <li class="card-item">Filtragem de Preço e Categoria</li>
+                    </ul>
+
+                    <ul class="tecnologias-lista">
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/Angular.svg" class="tecnologias-logo"/>
+                        </li>
+
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/TypeScript.svg" class="tecnologias-logo"/>
+                        </li>
+            
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/Bootstrap.svg" class="tecnologias-logo"/>
+                        </li>
+            
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/Javascript.svg" class="tecnologias-logo"/>
+                        </li>
+                    </ul>
+
+                    <div class="card-button">
+                        <a href="https://www.amazon.com.br/Livros/b/?ie=UTF8&node=6740748011&ref_=nav_cs_books" target="_blank">
+                            <button class="btn btn-primary">
+                                <span>Prévia</span>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </button>
+                         </a>
+
+                        <a href="https://github.com/CauaSilva28/Calculadora" target="_blank">
+                            <button class="btn">
+                                <span>Repositório</span>
+                                <i class="bi bi-card-text"></i>
+                            </button>
+                        </a>
+                    </div>
+
+                </div> <!-- FIM CARD-BODY Josis -->
+            </div> <!-- projeto-card -->
+
+            <div class="projeto-card card-reverso">
+                <img class="cartao" src="img/projects/portfolio.PNG" alt="">
+
+                <div class="card-body">
+                    <h3 class="card-title">Portfolio pessoal</h3>
+                    <p class="card-descricao">A história por trás dos Estilos Artísticos.</p>
+
+                    <ul class="card-list">
+                        <li class="card-item">Postagens relacionadas em destaque.</li>
+                        <li class="card-item">Filtros por Tag e Categorias.</li>
+                        <li class="card-item">Biografia do Autor.</li>
+                    </ul>
+
+                    <ul class="tecnologias-lista">
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/HTML5.svg" class="tecnologias-logo"/>
+                        </li>
+
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/Css.svg" class="tecnologias-logo"/>
+                        </li>
+            
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/Bootstrap.svg" class="tecnologias-logo"/>
+                        </li>
+            
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/Javascript.svg" class="tecnologias-logo"/>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- FIM CARD-REVERSO -->
+
+            <div class="projeto-card">
+                <img class="cartao" src="img/projects/games-store.jpg" alt="">
+
+                <div class="card-body">
+                    <h3 class="card-title">Games Store</h3>
+                    <p class="card-descricao">Loja online de Games</p>
+
+                    <ul class="card-list">
+                        <li class="card-item">Favoritos</li>
+                        <li class="card-item">Carrinho de Compras</li>
+                        <li class="card-item">Filtragem de Preço e Categoria</li>
+                    </ul>
+
+                    <ul class="tecnologias-lista">
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/Angular.svg" class="tecnologias-logo"/>
+                        </li>
+
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/TypeScript.svg" class="tecnologias-logo"/>
+                        </li>
+            
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/Bootstrap.svg" class="tecnologias-logo"/>
+                        </li>
+            
+                        <li class="tecnologias-item">
+                            <img src="img/tecnologias/Javascript.svg" class="tecnologias-logo"/>
+                        </li>
+                    </ul>
+
+                    <div class="card-button">
+                        <a href="https://store.steampowered.com/?l=portuguese" target="_blank">
+                            <button class="btn btn-primary">
+                                <span>Prévia</span>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </button>
+                         </a>
+
+                        <a href="https://github.com/CauaSilva28/Calculadora" target="_blank">
+                            <button class="btn">
+                                <span>Repositório</span>
+                                <i class="bi bi-card-text"></i>
+                            </button>
+                        </a>
+                    </div>
+
+                </div> <!-- FIM CARD-BODY 2 -->
+            </div> <!-- projeto-card 2-->
+
+        </div> <!-- FIM projetos-container -->
     </section>
 
-    <main id="main">
-        <section id="sobre" class="sobre">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Sobre</h2>
-                    <p>Bem-vindo à Nic Games, onde a paixão por jogos e a inovação se encontram para criar experiências inesquecíveis para jogadores de todas as idades. Fundada em 2024, a Nic Games nasceu do desejo de transformar ideias criativas em aventuras digitais emocionantes, unindo tecnologia de ponta com um profundo entendimento da cultura gamer.</p>
+    <section id="sobre" class="sobre">
+        <article class="sobre-content1">
+            <img class="sobre-foto" src="img/avatar.jpg" alt="">
+
+            <div class="sobre-descricao">
+                <h2>Sobre mim</h2>
+                <p>Cauã Silva. Entusiasta por futebol, tecnologia, games e PC, sonho em ganhar dinheiro desenvolvendo projetos front-end. Sofro torcendo para o São Paulo🥺 mas nunca irei abandoná-lo. Atualmente estou cursando front-end e programação de jogos digitais.</p>
+            
+                <div class="sobre-icons">
+                    <i class="bi bi-translate"></i>
+                    <span>Inglês: Básico</span>
                 </div>
-
-                <div class="row">
-                    <div class="col-lg-4" data-aos="fade-right">
-                        <img class="img-fluid" src="img/logo2.jfif">
-                    </div>
-
-                    <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                        <h3>Venda de Jogos</h3>
-                        <p class="fst-italic">Nic Games, a loja especializada nas maiores variedades gamers</p>
-                    
-
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li>
-                                        <i class="bi bi-calendar"></i>
-                                        <strong>Inauguração:</strong>
-                                        <span>01 Novembro 2023</span>
-                                    </li>
-
-                                    <li>
-                                        <i class="bi bi-window-fullscreen"></i>
-                                        <strong>Site:</strong>
-                                        <span>https://cauasilva28.github.io/SiteNicolas/</span>
-                                    </li>
-
-                                    <li>
-                                        <i class="bi bi-telephone"></i>
-                                        <strong>Telefone:</strong>
-                                        <span>+55 21 96748-6063</span>
-                                    </li>
-                                </ul>
-                            </div> <!-- Fim col lg 6 1 -->
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li>
-                                        <i class="bi bi-globe"></i>
-                                        <strong>Localização:</strong>
-                                        <span>Rio de Janeiro - RJ</span>
-                                    </li>
-
-                                    <li>
-                                        <i class="bi bi-geo"></i>
-                                        <strong>Bairro:</strong>
-                                        <span>Copacabana</span>
-                                    </li>
-
-                                    <li>
-                                        <i class="bi bi-envelope"></i>
-                                        <strong>Email:</strong>
-                                        <span>nicsigmarj24@gmail.com</span>
-                                    </li>
-                                </ul>
-                            </div> <!-- Fim col lg 6 2 -->
-                        </div>
-                        <p>Somos a maior e melhor industria gamer do Brasil, venha ser um Nic.</p>
-                    </div>
+                <div class="descricao-button">
+                    <a href="https://www.instagram.com/c4ua_svm/" target="_blank">
+                        <button class="btn btn-primary">
+                            <span>Conecte-se Comigo</span>
+                        </button>
+                    </a>
                 </div>
             </div>
+        </article>
 
-            <!-- SHIFT + ALT + F = IDENTAR -->
-
-            <!-- Conquistas -->
-            <section id="conquistas" class="conquistas">
-                <div class="container">
-                    <div class="section-title">
-                        <h2>Conquistas</h2>
-                        <p>Industria com mais reconhecimento gamer</p>
+        <article class="sobre-content2">
+            <div class="col1">
+                <div class="row1">
+                    <h3>Formação</h3>
+                    <h4>Programação de jogos digitais</h4>
+                    <p>Fev 2022 - Atualmente</p>
+                    <div class="sobre-icons">
+                        <i class="bi bi-backpack-fill"></i>
+                        <span>ETEC Basilides de Godoy</span>
                     </div>
-
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-                            <div class="count-box">
-                                <i class='bx bx-bowling-ball bxicon'></i>
-                                <span data-purecounter-start="0" data-purecounter-end="6854" data-purecounter-duration="2" class="purecounter"></span>
-                                <p><strong>Bolas furadas</strong><br> um craque no ping pong</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-                            <div class="count-box">
-                                <i class='bx bx-joystick bxicon'></i>
-                                <span data-purecounter-start="0" data-purecounter-end="158" data-purecounter-duration="2" class="purecounter"></span>
-                                <p><strong>Games jogados</strong><br> uma grande variedade de games</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-                            <div class="count-box">
-                                <i class="bi bi-person-check"></i>
-                                <span data-purecounter-start="0" data-purecounter-end="2489" data-purecounter-duration="2" class="purecounter"></span>
-                                <p><strong>Nics acessados</strong><br> os nics dominam o mundo gamer</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-                            <div class="count-box">
-                                <i class="bi bi-nintendo-switch"></i>
-                                <span data-purecounter-start="0" data-purecounter-end="1487" data-purecounter-duration="2" class="purecounter"></span>
-                                <p><strong>VideoGames mais usados</strong><br> uma variedade de jogadores no nintendo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> <!-- fim conquistar -->
-
-            <section id="skills" class="skills section-bg">
-                <div class="container">
-                    <div class="section-title">
-                        <h2>Vendas</h2>
-                        <p>Nossos números</p>
-                    </div>
-
-                    <div class="row skills-content">
-                        <div class="col-lg-6" data-aos="fade-up"> <!-- COLUNA 1 -->
-                            <div class="progress">
-                                <span class="skill">Vendas jogos de ação
-                                    <i class="val">40%</i>
-                                </span>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">Vendas jogos de terror
-                                    <i class="val">25%</i>
-                                </span>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">Vendas jogos de corrida
-                                    <i class="val">15%</i>
-                                </span>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">Vendas jogos de esportes
-                                    <i class="val">20%</i>
-                                </span>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIM COLUNA 1 -->
-
-                        <div class="col-lg-6" data-aos="fade-up"> <!-- COLUNA 2 -->
-                            <div class="progress">
-                                <span class="skill">Vendas jogos de puzzle
-                                    <i class="val">10%</i>
-                                </span>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">Vendas jogos de ficção científica
-                                    <i class="val">5%</i>
-                                </span>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">Vendas jogos de battle royale
-                                    <i class="val">35%</i>
-                                </span>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">Vendas jogos de FPS
-                                    <i class="val">50%</i>
-                                </span>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIM COLUNA 2 -->
-                    </div>
-                </div>
-            </section>
-
-        </section>
-        <!-- Resumo -->
-        <section id="resumo" class="resumo">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Resumo</h2>
-                    <p>Industria totalmente focado no mundo gamer e em satisfazer seus desejos como jogador</p>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-6" data-aos="fade-up">
-                        <h3 class="resumo-titulo">Onde tudo começou</h3>
-                        <div class="resumo-item pb-0">
-                            <h4>Nic Games</h4>
-                            <p>
-                                <em>Sou um pro-player de jogos desde de 2014, criei essa marca em 2024 por sempre ter vivido no mundo gamer e querer atrair um grande público de jogadores.</em>
-                            </p>
-                            <ul>
-                                <li>Rio de Janeiro - RJ</li>
-                                <li>+55 21 96748-6063</li>
-                                <li>nicsigmarj24@gmail.com</li>
-                            </ul>
-                        </div> <!-- fim resumo item -->
-
-                        <h3 class="resumo-titulo">Nova Geração</h3>
-                        <div class="resumo-item">
-                            <h4>Chegada de Zelda</h4>
-                            <h5>2016 - 2017</h5>
-                            <p>
-                                <em>Sucesso de players</em>
-                            </p>
-                            <p>Jogo com maior quantidade de jogadores em nossa industria</p>
-                        </div>
-                        <div class="resumo-item">
-                            <h4>Maior industria de jogos</h4>
-                            <h5>2023 - 2024</h5>
-                            <p>
-                                <em>Em 2023 se tornamos a industria de jogos com maior quantidade de players</em>
-                            </p>
-                            <p>
-                                <ul>
-                                    <li>Criamos nossa industria vitual</li>
-                                    <li>Começamos a atender todo o Brasil</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div> <!-- fim col -->
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="resumo-titulo">Objetivos</h3>
-                        <div class="resumo-item">
-                            <h4>Missão</h4>
-                            <h5>2023 - Atual</h5>
-                            <p>
-                                <em>Atrair todos os jogadores e se tornar a indústria de maior reconhecimento gamer no mundo</em>
-                            </p>
-                            <p>Industria em constante crescimento</p>
-                            <ul>
-                                <li>Primeira na distribuição de jogos</li>
-                                <li>Maior variação gamer no mundo</li>
-                            </ul>
-                        </div> 
-                        <div class="resumo-item">
-                            <h4>Visão</h4>
-                            <p>
-                                <em>Visamos alcançar o topo, daqui a 10 anos nos tornaremos a maior industria gamer do Brasil</em>
-                            </p>
-                        </div>
-                        <div class="resumo-item">
-                            <h4>Valores</h4>
-                            <p>
-                                <em>Nos diferenciamos pela nossa variedade gamer</em>
-                            </p>
-                            <p>Atraindo todos os jogadores no mundo</p>
-                            <ul>
-                                <li>Rapido atendimento</li>
-                                <li>Diferentes meios de comunicação</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Fim resumo -->
-        <!-- Portfolio -->
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Jogos</h2>
-                    <p>Conheça os estilos e jogos mais procurados pelo público gamer</p>
-                </div>
-
-                <div class="row" data-aos="fade-up">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-filters">
-                            <li data-filter="*">Todos</li>
-                            <li data-filter=".filter-acao">Jogos ação</li>
-                            <li data-filter=".filter-terror">Jogos terror</li>
-                            <li data-filter=".filter-fps">Jogos FPS</li>
-                            <li data-filter=".filter-nostalgico">Jogos nostálgicos</li>
-                        </ul>
+                    <h4>Dev front-end</h4>
+                    <p>Março 2024 - Atualmente</p>
+                    <div class="sobre-icons">
+                        <i class="bi bi-pc-display"></i>
+                        <span>SENAI - Mariano Ferraz - Especialização</span>
                     </div>
                 </div>
 
-                <div class="row portfolio-container">
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-acao">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/acao1.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/acao1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Red Dead Redemption 2">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 1 -->
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-fps">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/fps1.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/fps1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Valorant">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 2 -->
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-terror">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/terror1.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/terror1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Resident Evil 7">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 3 -->
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-terror">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/terror2.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/terror2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Outlast">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 4 -->
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-acao">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/acao2.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/acao2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="God of War">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 5 -->
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-fps">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/fps2.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/fps2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Counter Strike 2">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 6 -->
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-nostalgico">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/feliz1.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/feliz1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Minecraft">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 7 -->
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-terror">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/terror3.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/terror3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Silent Hill 2">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 8 -->
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-acao">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/acao3.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/acao3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tomb Raider">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 9 -->
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-nostalgico">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/feliz2.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/feliz2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Roblox">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 10 -->
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-fps">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/fps3.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/fps3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Overwatch">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 11 -->
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-nostalgico">
-                        <div class="portfolio-wrap">
-                            <img class="img-fluid" src="img/portfolio/feliz3.jpg">
-                            <div class="portfolio-links">
-                                <a href="img/portfolio/feliz3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Lego batman 1">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="detalhes.html" title="Mais informações">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div> <!-- fim portfolio links -->
-                        </div> <!-- fim portfolio wrap -->
-                    </div> <!-- fim foto 12 -->
-
-                </div> <!-- fim portfolio container -->
-            </div>
-        </section>
-
-        <section id="servicos" class="servicos">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2> Serviços </h2>
-                    <p> Somos uma industria completa de Games. Atuamos no setor de PC ou consoles.
-                        Entregando os melhores jogos do momento.
-                    </p>
+                <div class="row2">
+                    <h3>Experiências</h3>
+                    <h4>Estudante</h4>
+                    <span>Trabalho em grupo, organização, criatividade</span>
+                    <span>Durante meu período de especialização escolar, desenvolvi habilidades em trabalhos e projetos que podem agregar muito no ramo profissional.</span>
                 </div>
+            </div> <!-- FIM COL 1 -->
 
-                <div class="row">
+            <div class="col2">
+                <h3>Cursos</h3>
+                <div class="accordion">
+                    <div class="accordion-item active">
+                        <button class="accordion-header start">
+                            <span>Desenvolvimento front end</span>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </button>
 
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon">
-                            <i class="bi bi-motherboard"></i>
+                        <div class="accordion-body">
+                            <p>SENAI. 120h</p>
+                            <span>Desenvolvimento Front End com HTML5, CSS3, JavaScript, BootStrap e desenvolver habilidades práticas para construir aplicações web modernas e responsivas.</span>
                         </div>
-                        <h4 class="title"> Placa Mãe </h4>
-                        <p class="descricao"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor elit odio, imperdiet tempor magna cursus ut. Praesent laoreet, libero ac volutpat pellentesque, leo tortor sollicitudin odio, id dignissim odio massa ac ante. Duis id lacus sagittis, egestas nisl et, dignissim dui. In hac habitasse platea dictumst. Morbi faucibus eu lectus sit amet dapibus.</p>
-                    </div>
+                    </div> <!-- Elementos que irão fechar e abrir -->
+                
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Programação de jogos digitais</span>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </button>
 
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon">
-                            <i class="bi bi-cpu"></i>
+                        <div class="accordion-body">
+                            <p>ETEC Basilides de godoy. 3y</p>
+                            <span>Desenvolvimento de jogos digitais com ferramentas como unity, blender, photoshop, visual studio code, visual studio, visualg, word, excel, powerpoint, flutter, linguaguens(c#, html, css, javascript, sql).</span>
                         </div>
-                        <h4 class="title"> Processadores </h4>
-                        <p class="descricao"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor elit odio, imperdiet tempor magna cursus ut. Praesent laoreet, libero ac volutpat pellentesque, leo tortor sollicitudin odio, id dignissim odio massa ac ante. Duis id lacus sagittis, egestas nisl et, dignissim dui. In hac habitasse platea dictumst. Morbi faucibus eu lectus sit amet dapibus.</p>
                     </div>
+                
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>JavaScript</span>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </button>
 
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon">
-                            <i class="bi bi-pc-display"></i>
+                        <div class="accordion-body">
+                            <p>Curso em vídeo. 40h</p>
+                            <span>Curso de linguagem JavaScript, voltado para iniciantes e para quem quiser aprender mais sobre ECMAScript, a versão padronizada do JS.</span>
                         </div>
-                        <h4 class="title"> Gabinetes </h4>
-                        <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor elit odio, imperdiet tempor magna cursus ut. Praesent laoreet, libero ac volutpat pellentesque, leo tortor sollicitudin odio, id dignissim odio massa ac ante. Duis id lacus sagittis, egestas nisl et, dignissim dui. In hac habitasse platea dictumst. Morbi faucibus eu lectus sit amet dapibus.</p>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon">
-                            <i class="bi bi-gpu-card"></i>
-                        </div>
-                        <h4 class="title"> Placas de Video </h4>
-                        <p class="descricao"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor elit odio, imperdiet tempor magna cursus ut. Praesent laoreet, libero ac volutpat pellentesque, leo tortor sollicitudin odio, id dignissim odio massa ac ante. Duis id lacus sagittis, egestas nisl et, dignissim dui. In hac habitasse platea dictumst. Morbi faucibus eu lectus sit amet dapibus.</p>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon">
-                            <i class="bi bi-nvidia"></i>
-                        </div>
-                        <h4 class="title"> GPU's NVidia </h4>
-                        <p class="descricao"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor elit odio, imperdiet tempor magna cursus ut. Praesent laoreet, libero ac volutpat pellentesque, leo tortor sollicitudin odio, id dignissim odio massa ac ante. Duis id lacus sagittis, egestas nisl et, dignissim dui. In hac habitasse platea dictumst. Morbi faucibus eu lectus sit amet dapibus.</p>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon">
-                            <i class="bi bi-amd"></i>
-                            <i class="gg-adidas"></i>
-                        </div>
-                        <h4 class="title"> GPU's Radeon </h4>
-                        <p class="descricao"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor elit odio, imperdiet tempor magna cursus ut. Praesent laoreet, libero ac volutpat pellentesque, leo tortor sollicitudin odio, id dignissim odio massa ac ante. Duis id lacus sagittis, egestas nisl et, dignissim dui. In hac habitasse platea dictumst. Morbi faucibus eu lectus sit amet dapibus. </p>
-                    </div>
-
-
-                </div> <!-- fim row -->
-
-
-            </div>
-        </section> <!-- fim  services -->
-
-        <section id="depoimentos" class="depoimentos">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Depoimentos</h2>
-                    <p> Conteúdo sobre as Avaliações / Depoimentos / Feedbacks </p>
                 </div>
+            </div> <!-- FIM COL 2 -->
+        </article>
+    </section>
 
-                <div class="depoimentos-slider swiper" data-aos="fade-up" data-aos-delay="100">
+    <section id="contato" class="contato">
+        <h2>Contate-me</h2>
 
-                    <div class="swiper-wrapper">
+        <p>Estou disponível para orientações e novas conexões. Contate-me via email e conecte-se comigo através das minhas redes sociais.</p>
 
-                        <div class="swiper-slide">
-                            <div class="depoimento-item" data-aos="fade-up">
+        <ul class="menu menu-social">
+            <li>
+                <a href="https://github.com/CauaSilva28" target="_blank" class="menu-link">
+                    <i class="menu-icon bi bi-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/cau%C3%A3-santos-7834332ab/" target="_blank" class="menu-link">
+                    <i class="menu-icon bi bi-linkedin"></i>
+                    <span>Linkedin</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/c4ua_svm/" target="_blank" class="menu-link">
+                    <i class="menu-icon bi bi-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </li>
+        </ul>
+        <a href="mailto:cauasmsantos10@gmail.com" target="_blank">
+            <button class="btn btn-primary">
+                <span class="email">cauasmsantos10@gmail.com</span>
+            </button>
+        </a>
+    </section>
 
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-left"> </i>
-
-                                    Site que me informa muito bem sobre jogos para as minhas lives
-
-                                    <i class="bx bxs-quote-alt-right quote-right"> </i>
-                                </p>
-
-                                <img class="depoimento-img" src="img/depoimentos/alanzoka.jpg" alt="">
-                                <h3> Alanzoka </h3>
-                                <h4> Maior streamer brasileiro </h4>
-                            </div>
-                        </div> <!-- fim slide 1 -->
-
-                        <div class="swiper-slide">
-                            <div class="depoimento-item" data-aos="fade-up">
-
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-left"> </i>
-
-                                    Fifa é o melhor jogo do mundo!
-
-                                    <i class="bx bxs-quote-alt-right quote-right"> </i>
-                                </p>
-
-                                <img class="depoimento-img" src="img/depoimentos/casimiro.jpg" alt="">
-                                <h3> Casimiro </h3>
-                                <h4> Maior streamer de esportes </h4>
-                            </div>
-                        </div> <!-- fim slide 2 -->
-
-                        <div class="swiper-slide">
-                            <div class="depoimento-item" data-aos="fade-up">
-
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-left"> </i>
-
-                                    XALABAIA MONSTRO!!!
-
-                                    <i class="bx bxs-quote-alt-right quote-right"> </i>
-                                </p>
-
-                                <img class="depoimento-img" src="img/depoimentos/paitroll.jpg" alt="">
-                                <h3> Pai troll </h3>
-                                <h4> YouTuber gamer que adora desafios </h4>
-                            </div>
-                        </div> <!-- fim slide 3 -->
-
-                        <div class="swiper-slide">
-                            <div class="depoimento-item" data-aos="fade-up">
-
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-left"> </i>
-
-                                    Meus fãs adoram os jogos que utilizo da Nic Games
-
-                                    <i class="bx bxs-quote-alt-right quote-right"> </i>
-                                </p>
-
-                                <img class="depoimento-img" src="img/depoimentos/authentic.jpg" alt="">
-                                <h3> AuthenticGames </h3>
-                                <h4> YouTuber gamer para crianças </h4>
-                            </div>
-                        </div> <!-- fim slide 4 -->
-
-                        <div class="swiper-slide">
-                            <div class="depoimento-item" data-aos="fade-up">
-
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-left"> </i>
-
-                                    É ooo Pauloooo
-
-                                    <i class="bx bxs-quote-alt-right quote-right"> </i>
-                                </p>
-
-                                <img class="depoimento-img" src="img/depoimentos/paulinho.jpg" alt="">
-                                <h3> Paulinho o loko </h3>
-                                <h4> YouTuber de games para jovens </h4>
-                            </div>
-                        </div> <!-- fim slide 5 -->
-                    </div> <!-- fim swiper-wrapper -->
-                    <div class="swiper-pagination"> </div>
-                </div> <!-- fim depoimentos-slider -->
-            </div>
-        </section> <!-- fim depoimentos -->
-
-        <section id="contato" class="contato">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2> Contato </h2>
-                    <p> Tem alguma dúvida, sugestão ou gostaria de saber mais sobre os nossos Consoles? Entre em contato
-                        conosco! Estamos sempre prontos para ajudar. </p>
-                </div>
-
-                <div class="row" data-aos="fade-in">
-
-                    <div class="col-lg-5 d-flex align-items-stretch">
-
-                        <div class="info">
-
-                            <div class="endereco">
-                                <i class="bi bi-geo-alt"> </i>
-                                <h4>Endereço:</h4>
-                                <p> R: Jaguaré Mirim, 71 <br>Vila Leopoldina - SP</p>
-                            </div> <!-- fim endereco -->
-
-                            <div class="email">
-                                <i class="bi bi-envelope"> </i>
-                                <h4>Email:</h4>
-                                <p> mail.divstore@vendas.br </p>
-                            </div> <!-- fim email -->
-
-                            <div class="fone">
-                                <i class="bi bi-whatsapp"> </i>
-                                <h4>WhatsApp:</h4>
-                                <p> (11) 9 8765 - 4321 </p>
-                            </div> <!-- fim fone -->
-                            
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7358.848528664736!2d-42.86133100598739!3d-22.749631153252906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99bff5afbc21c3%3A0x81cefcbdcd8acf65!2zSXRhYm9yYcOtLCBSSg!5e0!3m2!1spt-BR!2sbr!4v1719061848149!5m2!1spt-BR!2sbr" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                        </div> <!-- fim info -->
-                    </div> <!-- coluna Esquerda -->
-
-                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form class="email-form" action="#" method="#">
-                            <div class="row">
-                                    <div class="row">
-                                        <div class="form-group col-md-6">
-                                            <label for="nome">Nome Completo *</label> <!-- Nome que fica em cima da caixa de texto em um formulario -->
-                                            <input class="form-control" type="text" name="nome" required>
-                                        </div>
-
-                                        <div class="form-group col-md-6">
-                                            <label for="email">Seu email *</label>
-                                            <input class="form-control" type="email" name="email" required>
-                                        </div>
-                                    </div>
-
-                            </div> <!-- fim row -->
-
-                            <div class="form-group">
-                                <label for="assunto">Assunto</label>
-                                <input class="form-control" type="text" name="assunto" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="mensagem">Digite a sua mensagem. *</label>
-                                <textarea class="form-control" name="mensagem" rows="10" required></textarea>
-                            </div>
-
-                            <div class="text-center">
-                                <button type="submit">Enviar</button>
-                            </div>
-
-                        </form> <!-- fim form -->
-                    </div>
-
-                </div> <!-- fim row -->
-            </div>
-        </section>
-
-    </main> <!-- fim main -->
-
-    <footer id="footer">
-        <div class="container">
-            <div class="copyright">
-                &copy; Todos os Direitos Reservados.
-                <strong> <span> Nic Games </span> </strong>
-            </div>
-            <div class="creditos">
-                Desenvolido por <i class="bi bi-github"> </i>
-                <a href="https://github.com/CauaSilva28" target="_blank"> Cauã Silva </a>
-            </div>
-        </div>
+    <footer>
+        <p>
+            &COPY; 2024. Portfólio desenvolvido para fins educativos do curso de front-end 
+            <a href="https://sp.senai.br/unidade/leopoldina/" target="_blank">SENAI.</a>
+            Desenvolvido por
+            <a href="https://github.com/CauaSilva28" target="_blank">Cauã Silva</a>
+        </p>
     </footer>
 
-    <!-- back-to-top -->
-     <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-        <i class="bi bi-arrow-up-short"></i>
-     </a>
-    
-    <!-- JS bootstrap -->
-    <script src="bootstrap/purecounter/purecounter_vanilla.js"></script>
-    <script src="bootstrap/aos/aos.js"></script>
-    <script src="bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="bootstrap/glightbox/js/glightbox.min.js"></script>
-    <script src="bootstrap/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="bootstrap/swiper/swiper-bundle.min.js"></script>
-    <script src="bootstrap/typed.js/typed.umd.js"></script>
-    <script src="bootstrap/waypoints/noframework.waypoints.js"></script>
-
-    <!-- JS principal -->
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
